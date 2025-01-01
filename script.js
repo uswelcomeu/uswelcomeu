@@ -1,13 +1,3 @@
-// require('global-agent/bootstrap');
-// global.GLOBAL_AGENT.HTTP_PROXY = 'http://127.0.0.1:7890';
-const { Worker, isMainThread, parentPort, workerData } = require("worker_threads");
-!isMainThread && workerData?.argv && (process.argv = workerData.argv);
-const { parseArgs, until, wait, sleep, exit, confirm, petch, shell, mkdirp, fs, dayjs, Big, cryptojs, sqlite, rPwd, replaceStr, bJson, rInt, rIndex, log, nlog, blog, ListMap, isEmpty, isNumber, CcMap, rBigInt, rArr, consoleCode } = require("../utils/utils");
-// const { scanApi } = require('./core/scan_api');
-// const proxy = undefined;
-const proxy = `http://127.0.0.1:7890`;
-let args = !isMainThread && workerData?.args ? workerData.args : parseArgs((process.argv.slice(2)), { string: ['0x----'] });
-
 (async () => {
 
     if (1) {
@@ -32,7 +22,7 @@ let args = !isMainThread && workerData?.args ? workerData.args : parseArgs((proc
                             const txts = [];
                             [...content.matchAll(regex)].forEach(e => {
                                 let text = e[1];
-                                text = text.replaceAll('干嘛', '干什么')
+                                text = text.replaceAll('a', 'b')
                                 txts.push(text);
                             });
                             fs.writeFileSync(path.join(currPath, `_${file.name}`), txts.join('\r\n\r\n'))
@@ -41,7 +31,7 @@ let args = !isMainThread && workerData?.args ? workerData.args : parseArgs((proc
                 }
             })
         };
-        handle({ currPath: `C:\\Users\\xxx\\Desktop\\xxx\\xxx\\xxx\\_CV台词` });
+        handle({ currPath: `C:\\xxx` });
     }
 
 })();

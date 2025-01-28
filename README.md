@@ -1,4 +1,4 @@
-## I only change this for u 
+## welcome u
 
 <!--
 **uswelcomeu/uswelcomeu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
